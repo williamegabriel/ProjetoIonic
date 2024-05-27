@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+Atendente
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-button expand="block" (click)="senhasService.atenderSenha()">Chamar próxima Senha</ion-button>
+    </ion-card-header>
+  </ion-card>
+<ion-card>
+  <ion-list> 
+    <ion-list-header>Senhas na Fila:</ion-list-header>
+    <ion-item *ngFor="let senha of senhasService.vetorSenhas">
+      <ion-icon slot="start" name="person"></ion-icon>
+      <ion-label>{{senha}}</ion-label> 
+    </ion-item>
+  </ion-list> 
+</ion-card>
+</ion-content>
